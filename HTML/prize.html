@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<title>The Beatles</title>
+<link rel="icon" href="B.jpg">
+<style>
+	p.a1 { font-size:40px; }
+	p.a1::first-letter{ font-size:100px; }
+	fieldset { border-color:black; margin-right:+50%; font-size:30px; }
+	button { font-size:20px; }
+</style>
+</head>
+<body style="background-image:url('OIP.jpg');  background-size:100%; ">
+<a href="proth.html">
+	<image src="beatles.png" width="10%" alt="GoBack"></image>
+</a>
+<p class="a1">
+Είναι η τυχερή σου ημέρα; Αν ναι τότε εισήγαγε τα στοιχεία σου στην κάτω φόρμα και μπες στον διαγωνισμό για να κερδήσεις δώρο διπλό εισιτήριο για την επόμενη συναυλία των <b>Beatles</b>.
+</p>
+<form><fieldset>
+<legend><i>Διαγωνισμός</i></legend>
+	<label for="win">Εισάγεται το πλήθος των διαγωνιζόμενων</label><br>
+	<input type="number" id="win" name="prize" min="1" required><br><br>
+	<button onClick="exchange()">Any winners?</button>
+</fieldset></form>
+</body>
+
+<script>
+function exchange()
+{
+	prize(document.getElementById('win').value);
+}
+
+function prize(tot)
+{
+	var datex=[], daten=[], i;
+	let name=[];
+	for (i = 1; i <= tot; i++)
+	{
+		name[i]=window.prompt("Εισάγεται ψευδόνυμο για τον #"+i);
+		datex[i]=window.prompt("ποιο το έτος γέννησης σου "+name[i]+" ;");
+		while (datex[i]<1000 || 9999<datex[i])
+		{
+			datex[i]=window.prompt("Αδύνατο έτος γέννησης, ξαναεισάγεται");
+		}
+		daten[i]=parseFloat(datex[i]);
+	}
+	Answer(tot, daten, name);
+}
+
+function Answer(tot, daten, name) 
+{
+	var newWindow, i, j;
+	let cont;
+	cont="<html><body style='background-color:#B3CBE3; font-family:arial; font-size:30px'>";
+	for (i = 1; i <= tot; i++)
+	{
+		if (daten[i] == 2003)
+		{
+			cont=cont+"<p>Οι νικητές είναι: <br>";
+			for (j = 1; j <= tot; j++)
+			{
+				if (daten[j] == 2003)
+				{cont=cont +"<li>"+ name[j]+ "</li>";}
+			}
+			break;
+		}
+		else if (i==tot)
+			cont=cont+"<p>Κανένας δεν κέρδισε.";
+	}
+	cont=cont+"</p></body></html>";
+	newWindow = window.open("", "myWindow", "width=500, height=300");
+	newWindow.document.write(cont);
+}
+</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<link rel="shortcut icon" href="B.jpg" type="icon-png">
+<title>Φόρμα αξιολόγησης δισκών</title> 
+<style>
+fieldset{margin:auto;
+		width:50%;
+		font-size:20px;
+		background-color:silver;}
+form { display: table;  border-collapse:separate; border-spacing:2px;}
+input[type='number']{ width: 25px; }
+div{font-size:50px;}	
+p{font-size:20px;}	
+body{background-color:orange;}
+p:first-letter{ font-size:100px; }
+</style>
+</head>
+<body>
+<a href="proth.html">
+	<image src="beatles.png" width="10%" alt="GoBack"></image>
+</a>
+<p style="font-family:courier; font-size:60px; text-align:center;">THE BEATLES</p>
+<p>Το συγκρότημα <b><em>Τhe Beatles</em></b> θα παρουσιάσει έναν νέο δίσκο τον Φεβρουάριο του 2022. Γι αυτό προσκαλεί τους θαυμαστές του να συμπλώσουν τη παρακάτω φόρμα αξιολόγησης των δισκών του, ώστε τα μέλη του να ακούσουν την γνώμη του κοινού. Η συμπλήρωση της φόρμας είναι <ins> προαιρετική</ins> και δεν κερδίζετε κανένα βραβείο.</p>
+<br>
+<iframe width="510" height="265" src="https://www.youtube.com/embed/QDYfEBY9NM4" frameborder="0" allowfullscreen title="Let it be"></iframe>
+<br>
+<fieldset>
+<form id="f5" method="post" action="trith.php">
+<table>
+<tr>
+<td>Συμπληρώστε το ψευδώνυμο σας:</td><td><div><input type="text" id="name" name="name"></div></td>
+</tr>
+<tr>
+<td>Ποιο ειναι το φύλο σας</td><td>Αρρεν<input type="radio" name="sex" id="m" value="m">Θηλυ<input type="radio" name="sex" id="f" value="f"></td>
+</tr>
+<tr>
+<td>Ποιο αλμπουμ σας προκάλεσε τα περισσότερα συναισθήματα;</td>
+<td><select name="album" id="album">	<!-- Έβαλα την χρονολογία στον τίτλο για να μην μπερδευτεί ο χρήστης -->
+<option>Please Please Me (1963)</option>
+<option>With The Beatles (1963)</option>
+<option>A Hard Day’s Night (1964)</option>
+<option>Beatles For Sale (1964)</option>
+<option>Help! (1965)</option>
+<option>Rubber Soul (1965)</option>
+<option>Revolver (1966)</option>
+<option>Sgt Pepper’s Lonely Hearts Club Band (1967)</option>
+<option>The Beatles (White Album) (1968)</option>
+<option>Yellow Submarine (1969)</option>
+<option>Abbey Road (1969)</option>
+<option>Let It Be (1970)</option>
+</select></td>
+</tr>
+<tr>
+<td>Περιγράψτε τα συναισθήματα που σας προκάλεσε αυτό το αλμπουμ είτε θετικά είτε αρνητικά</td><td><textarea name="comments" id="comments"></textarea></td>
+</tr>
+<tr>
+<td>Ποιο ή ποια τραγούδια του αλμπουμ που επιλέξατε σας άρεσαν λιγότερο</td><td><textarea name="dislike" id="dislike"></textarea></td>
+</tr>
+<tr>
+<td>Γράψτε έναν στίχο απο ενα τραγούδι του αλμπουμ που επιλέξατε που θα θυμάστε για πάντα</td><td><textarea name="lyrics" id="lyrics"></textarea></td>
+</tr>
+<tr>
+<td>Απο το 1 εως το 5 πόσο βαθμολογείτε το αλμπουμ που επιλέξατε (βαθμολογείστε αντικειμενικά λαμβάνοντας υπόψην τη μελωδία, τους στίχους και τη μουσική όλων των τραγουδίων)</td><td><input type="number" name="review" id="review"><span style="color:yellow">★</span></td>
+</tr>
+</table>
+<input type="button" name="submt" id="submt" value="submit">
+<input type="reset" value="reset">
+</form>
+</fieldset>
+<br><br><br><br><br><br><br>
+
+<script>
+var errors="";
+function checkme(){
+review=document.getElementById("review").value;
+if(review<0||review>5){
+alert("Παραλαλώ δώστε εναν αριθμό απο το 1 εως το 5 στη βαθμολόγηση");
+document.getElementById("review").style="border:2px solid red;";
+errors="error";
+}else{
+errors="";
+document.getElementById("review").style="";
+}
+if(errors.length==0){document.getElementById("f5").submit()}
+}
+document.getElementById("submt").addEventListener("click", function () {checkme()});
+</script>
+</body>
+</html>
