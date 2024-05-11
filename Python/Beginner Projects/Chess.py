@@ -5,7 +5,7 @@ import random
 #Συνάρτηση για να εμφανίζει τη σκακιέρα
 def print_board(x):
 	for i in range(8):
-		print " ".join(x[i])
+		print(" ".join(x[i]))
 
 #Συνάρτηση που αλλάζει το περιεχόμενο ανάλλογα με το τι περιέχει
 #Αν είχε βασίλισσα και άρα απειλείται, από κεφαλαίο, γίνεται μικρό
@@ -93,4 +93,4 @@ for i in range(8):
 	for j in range(8):
 		if board[i][j]=="Q":
 			cnt+=1
-print cnt
+print(cnt)
