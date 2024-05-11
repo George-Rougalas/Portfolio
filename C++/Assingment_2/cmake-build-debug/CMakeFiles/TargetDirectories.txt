@@ -1,0 +1,3 @@
+C:/Users/georg/CLionProjects/Assingment_2/cmake-build-debug/CMakeFiles/Assingment_2.dir
+C:/Users/georg/CLionProjects/Assingment_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/georg/CLionProjects/Assingment_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
