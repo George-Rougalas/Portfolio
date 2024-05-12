@@ -1,0 +1,13 @@
+C:\Users\georg\source\repos\Aaaingment 1\bin\Debug\Aaaingment 1.exe.config
+C:\Users\georg\source\repos\Aaaingment 1\bin\Debug\Aaaingment 1.exe
+C:\Users\georg\source\repos\Aaaingment 1\bin\Debug\Aaaingment 1.pdb
+C:\Users\georg\source\repos\Aaaingment 1\obj\Debug\Aaaingment 1.csproj.AssemblyReference.cache
+C:\Users\georg\source\repos\Aaaingment 1\obj\Debug\Aaaingment 1.csproj.SuggestedBindingRedirects.cache
+C:\Users\georg\source\repos\Aaaingment 1\obj\Debug\Aaaingment_1.Form1.resources
+C:\Users\georg\source\repos\Aaaingment 1\obj\Debug\Aaaingment_1.Properties.Resources.resources
+C:\Users\georg\source\repos\Aaaingment 1\obj\Debug\Aaaingment 1.csproj.GenerateResource.cache
+C:\Users\georg\source\repos\Aaaingment 1\obj\Debug\Aaaingment 1.csproj.CoreCompileInputs.cache
+C:\Users\georg\source\repos\Aaaingment 1\obj\Debug\Aaaingment 1.exe
+C:\Users\georg\source\repos\Aaaingment 1\obj\Debug\Aaaingment 1.pdb
+C:\Users\georg\source\repos\Aaaingment 1\obj\Debug\Aaaingment_1.Form2.resources
+C:\Users\georg\source\repos\Aaaingment 1\obj\Debug\Aaaingment_1.Form3.resources
