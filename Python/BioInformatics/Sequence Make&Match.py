@@ -171,9 +171,6 @@ for repeats in range(50):
 
     "b) create middle of sequence"
     #add the patterns 
-    # νομίζω κατάλαβα λάθος την εκφώνση αν ναι, 
-    # σας παρακαλώ εποικοινωνήστε και θα σας στείλω την διόρθωση σε 15 λεπτά το πολύ, 
-    # δεν είναι έλειψη γνώσεων, απλά λάθος ερμηνεία 
     for patt in sequence_total:
         for gn in patt:
             final.append(gn)
@@ -216,7 +213,6 @@ for x in aligned_datasetA:
     print("".join(x))
 
 
-"III) Hardest part"
 data_for_temp = []
 for i in range(len(datasetB)):
     for j in range(i+1, len(datasetB)):
